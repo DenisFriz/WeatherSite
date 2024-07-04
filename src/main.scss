@@ -1,0 +1,56 @@
+@import "./styles/reset";
+
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 200px 1fr;
+  min-height: 100vh;
+  column-gap: 20px;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 300px 1fr;
+  }
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+}
+
+.main-right {
+  @media screen and (max-width: 750px) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.container-dark {
+  background-color: #211e21;
+}
+
+.btn {
+  cursor: pointer;
+  color: #fff;
+  background-color: #1271e2;
+  padding: 8px 6px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn_dark {
+  color: white;
+  background-color: #d6bd4d;
+}

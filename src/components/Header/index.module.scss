@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  margin-top: 15px;
+
+  @media screen and (max-width: 1030px) {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: start;
+  }
+
+  &__dateInfo {
+    span {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &__dateInfoTop {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  &__dateInfoBottom {
+    font-size: 20px;
+  }
+
+  &__form {
+    input {
+      border: none;
+      border-radius: 5px;
+      padding: 8px 6px 8px 25px;
+    }
+  }
+
+  &__error {
+    font-size: 20px;
+    color: red;
+  }
+}
+
+.header_dark {
+  color: #f6f6f6;
+}

@@ -1,0 +1,29 @@
+.loader__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__spinner {
+  border: 8px solid #85b0a9;
+  border-radius: 50%;
+  border-top-color: aqua;
+  width: 150px;
+  height: 150px;
+  animation: spin 1.4s ease 1.4s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

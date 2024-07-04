@@ -1,0 +1,92 @@
+.days {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  .days__item {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 15px;
+    background: linear-gradient(28deg, rgb(57 113 167) 14%, rgb(27 85 108) 95%);
+    color: #fff;
+    transition: scale 0.15s ease-in;
+    &:hover {
+      overflow: hidden;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 200%;
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 0px 11px 14px rgba(255, 255, 255, 0.7);
+        animation: pulse 0.4s ease-in-out;
+      }
+    }
+
+    .days__day {
+      text-align: center;
+      font-size: 35px;
+    }
+
+    .days__img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .days__temp {
+      display: flex;
+      align-items: flex-end;
+      column-gap: 10px;
+      margin-bottom: 12px;
+    }
+    .days__tempMin,
+    .days__tempMax {
+      font-size: 24px;
+      & > span {
+        font-size: 16px;
+      }
+    }
+    .days__tempMin,
+    .days__tempMax,
+    .days__tempAvg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .days__tempAvg {
+      flex-direction: column;
+      font-size: 35px;
+      & > span {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.days__item_dark {
+  background: linear-gradient(
+    11deg,
+    rgb(93 73 24) 5%,
+    rgb(49 123 153) 95%
+  ) !important;
+}
+
+@keyframes pulse {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
