@@ -37,7 +37,7 @@ async function getWeatherData<T>({
 }: WeatherType): Promise<Result<T>> {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=${days}`
+      `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=${days}`
     );
     if (!response.ok) {
       throw new Error("An error occurred while loading data.");
